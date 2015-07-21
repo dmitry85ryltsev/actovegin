@@ -1,0 +1,160 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>{!POSITION_1}</title>
+      <link href="css/style_general.css" rel="stylesheet">
+      <link href="css/style_mechanism.css" rel="stylesheet">
+      <script src="js/getElementsByClassName-1.0.1.js"></script> 
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/iscroll.js"></script> 
+      <script> 
+         var sourceScroll, comentScroll; 
+         function loaded() { 
+         sourceScroll = new iScroll('source_info', { scrollbarClass: 'infoScrollbar' }); 
+         }; 
+         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
+         document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false); 
+      </script> 
+      <script src="js/custom_source.js"></script> 
+      <script> 
+         $(document).ready(function(){ 
+         var titleBtns = getElementsByClassName("title"); 
+         
+         for(var i = 0; i < titleBtns.length; i++) { 
+         titleBtns[i].addEventListener('click', function(event) { 
+         var indexBtn = titleBtns.indexOf(this)+1;	
+         
+         if( this.className=='title' ) { 
+         this.className += ' active'; 
+         $('#content-'+indexBtn).addClass('active'); 
+         } 
+         else { 
+         this.className = 'title'; 
+         $('#content-'+indexBtn).removeClass('active'); 
+         }; 
+         }); 
+         }; 
+         
+         }); 
+      </script> 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> 
+   </head>
+   <body>
+      <div class="wrapper">
+         <a href="instruction.pdf" class="logo"></a> 
+         <!-- ___________________________________________________________________________________________________________________ header --> 
+         <header>
+            <div class="btn source" id="source"></div>
+            <div class="btn coment" id="coment"></div>
+            <h1>Механизм действия Актовегина<br>при острой ишемии мозга<sup>1-5</sup></h1>
+         </header>
+         <!-- ___________________________________________________________________________________________________________________ content --> 
+         <div class="Stage_base" id="Stage_base">
+            <div class="actovegin fl_left"></div>
+            <div class="videoteka fl_right">
+               <div class="title">Нейропротективный эффект<sup>1</sup></div>
+               <div class="content" id="content-1">
+                  <div class="preview fl_left">
+                     <!--<img src="images/visual/img-7.jpg" alt="" height="142"> --> 
+                     <video width="200" height="122" controls poster="images/visual/img-7.jpg">
+                        <source src="video/apoptose.mp4" type="video/mp4">
+                        Your browser does not support the video tag. 
+                     </video>
+                     <p>Снижение процессов<br>апаптоза<sup>1</sup></p>
+                  </div>
+                  <div class="preview fl_right">
+                     <!--<img src="images/visual/img-8.jpg" alt="" height="142"> --> 
+                     <video width="200" height="122" controls poster="images/visual/img-8.jpg">
+                        <source src="video/oxidative_stress.mp4" type="video/mp4">
+                        Your browser does not support the video tag. 
+                     </video>
+                     <p>Уменьшение<br>оксидативного стресса<sup>1,2</sup></p>
+                  </div>
+                  <ul class="benefits">
+                     <li>Повышает выживаемость нейронов;</li>
+                     <li>Способствует увеличению количества<br>синаптических связей;</li>
+                     <li>Снижает оксидативный стресс, за счет<br>связывания свободных радикалов О<sub>2</sub>;</li>
+                     <li>Снижает уровень Каспазы-3, и амилоидных<br>&beta;-пептидов &Alpha;&beta;<sub>25-35</sub></li>
+                  </ul>
+               </div>
+               <div class="title">Метаболический эффект<sup>2</sup></div>
+               <div class="content" id="content-2">
+                  <div class="preview fl_left">
+                     <!--<img src="images/visual/img-7.jpg" alt="" height="142"> --> 
+                     <video width="200" height="122" controls poster="images/visual/img-9.jpg">
+                        <source src="video/glukoza.mp4" type="video/mp4">
+                        Your browser does not support the video tag. 
+                     </video>
+                     <p>Повышение<br>утилизации глюкозы<sup>3</sup></p>
+                  </div>
+                  <div class="preview fl_right">
+                     <!--<img src="images/visual/img-8.jpg" alt="" height="142"> --> 
+                     <video width="200" height="122" controls poster="images/visual/img-10.jpg">
+                        <source src="video/oxygen.mp4" type="video/mp4">
+                        Your browser does not support the video tag. 
+                     </video>
+                     <p>Повышение<br>концентрации кислорода<sup>4,5</sup></p>
+                  </div>
+                  <ul class="benefits">
+                     <li>Активирует переносчики глюкозы GLUT-1<br>и GLUT-4;</li>
+                     <li>Способствует улучшению транспорта глюкозы<br>через гематоэнцефалический барьер;</li>
+                     <li>Снижает уровень внутриклеточного лактата;</li>
+                     <li>Усиливает окислительное фосфорилирование<br>глюкозы, тем самым улучшая клеточное<br> 
+                        дыхание в митохондриях и повышая уровень<br>АТФ в 19 раз
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- Stage_base --> 
+         <div class="over"></div>
+         <!-- ___________________________________________________________________________________________________________________ refer --> 
+         <div class="refer_pane source">
+            <div class="box_info" id="source_info">
+               <div class="info_inner">
+                  <ol>
+                     <li>Elmlinger MW, Kriebel M and Ziegler D. Neuroprotective and anti-oxidative effects of the<br> 
+                        hemodialysate actovegin on primary rat neurons in vitro. Neuromolecular Med 2011;13:266–274.
+                     </li>
+                     <li>Machicao F, Muresanu DF, Hundsberger H, et al. Pleiotropic neuroprotective and metabolic effects of<br> 
+                        Actovegin’s mode of action. J Neuro Sci 2012;322:222–227.
+                     </li>
+                     <li>Machicao F, Mühlbacher C, Haring H. Inositol phospho-oligosaccharides from a dialysate (Actovegin) <br> 
+                        obtained from blood mimic the effect of lipogenesis glucose transport and lipolysis in rat adipocytes. <br> 
+                        Akt Endokr Stoffw 1989;10:111.
+                     </li>
+                     <li>Hegner N. Wirkung eines deproteinisierten Hämoderivates (Actovegin) im induzierten hypovolämischen Schock<br> 
+                        unter besonderen Berücksichtigung des Energiestoffwechsels. Johannes-Gutenberg Universität Mainz: Institut<br> 
+                        für Anästhesiologie; 1983.
+                     </li>
+                     <li>Giarola P. Effects of blood extracton plasma lipids, blood coagulation, fibrinolysis, and platelet aggregation<br> 
+                        in experimental hypercholesterolemia of rabbits. Arzneim-Forsch 1974;24:925–8.
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="close" id="source_close"></div>
+         </div>
+      </div>
+      <!-- wrapper --> 
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+            <li><a href="index4.html">4</a></li>
+            <li><a href="index5.html">5</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+      <div class="inform">
+         <p>Clickable</br>buttons</p>
+      </div>
+   </body>
+</html>

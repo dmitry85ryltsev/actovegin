@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>{!POSITION_1}</title>
+      <link href="css/style_general.css" rel="stylesheet">
+      <link href="css/style_pie_toast.css" rel="stylesheet">
+      <script src="js/getElementsByClassName-1.0.1.js"></script> 
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/iscroll.js"></script> 
+      <script> 
+         var sourceScroll, comentScroll; 
+         function loaded() { 
+         sourceScroll = new iScroll('source_info', { scrollbarClass: 'infoScrollbar' }); 
+         }; 
+         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
+         document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false); 
+      </script> 
+      <script src="js/custom_source.js"></script> 
+      <script> 
+         window.onload = function() { 
+         var countStep = 0; 
+         var segmentBtns = getElementsByClassName("segment"); 
+         var itemBtns = getElementsByClassName("item"); 
+         
+         segmentBtns[0].className += ' animate'; 
+         itemBtns[0].className += ' animate'; 
+         
+         var intervalID = setInterval( function() { 
+         countStep++; 
+         segmentBtns[countStep].className += ' animate'; 
+         itemBtns[countStep].className += ' animate'; 
+         
+         if( countStep==4 ) { clearInterval(intervalID); }; 
+         }, 1200); 
+         
+         }; 
+      </script> 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> 
+   </head>
+   <body>
+      <div class="wrapper">
+         <a href="instruction.pdf" class="logo"></a> 
+         <!-- header --> 
+         <header>
+            <div class="btn source" id="source"></div>
+            <div class="btn coment" id="coment"></div>
+            <h1>Патогенетическая классификация<br>ишемических инсультов TOAST<sup>1</sup></h1>
+         </header>
+         <!-- content --> 
+         <div class="Stage_base" id="Stage_base">
+            <div class="visual">
+               <div class="segment_wrapper">
+                  <div class="segment"></div>
+               </div>
+               <div class="segment_wrapper">
+                  <div class="segment"></div>
+               </div>
+               <div class="segment_wrapper">
+                  <div class="segment"></div>
+               </div>
+               <div class="segment_wrapper">
+                  <div class="segment"></div>
+               </div>
+               <div class="segment_wrapper">
+                  <div class="segment"></div>
+               </div>
+            </div>
+            <!-- visual --> 
+            <ul class="legend">
+               <li class="item">
+                  <strong>14%</strong> 
+                  <p>Инсульт неустановленной<br>этиологии</p>
+               </li>
+               <li class="item">
+                  <p>Инсульт другой<br>установленной этиологии</p>
+                  <strong>4%</strong> 
+               </li>
+               <li class="item">
+                  <p>Лакунарный<br>инсульт</p>
+                  <strong>23%</strong> 
+               </li>
+               <li class="item">
+                  <strong>34%</strong> 
+                  <p>Атеротромботический<br>инсульт</p>
+               </li>
+               <li class="item">
+                  <p>Кардиоэмболический<br>инсульт</p>
+                  <strong>25%</strong> 
+               </li>
+            </ul>
+            <h3>Использование классификации подтипов ишемического инсульта уже в начальный<br> 
+               период заболевания является важным условием правильного прогноза, выбора<br> 
+               профилактических мероприятий и оптимальной лечебной тактики.<sup>2</sup>
+            </h3>
+         </div>
+         <!-- Stage_base --> 
+         <div class="over"></div>
+         <!-- refer --> 
+         <div class="refer_pane source">
+            <div class="box_info" id="source_info">
+               <div class="info_inner">
+                  <ol>
+                     <li>Adams HP Jr., Bendixen B.H., Kappelle LJ, Biller J. Classification of subtype of acute ischemic stroke. 
+                        Definitions for use in a multicenter clinical trial. TOAST. Trial of Org 10172 in Acute Stroke Treatment.//Stroke. 
+                        -1993. -V.24.(l). -P.35-40.
+                     </li>
+                     <li>"Подтипы ишемических нарушений мозгового кровообращения в молодом возрасте: диагностика и лечение", Пизова Наталья Вечяславовна, Журнал "Неврология, нейропсихиатрия, психосоматика", №4, 2012</li>
+                  </ol>
+               </div>
+            </div>
+            <div class="close" id="source_close"></div>
+         </div>
+      </div>
+      <!-- wrapper --> 
+      <!--page-nav-->
+      <div class="page-nav">
+      	<ul>
+      		<li><a href="index.html">1</a></li>
+      		<li><a href="index2.html">2</a></li>
+      		<li><a href="index3.html">3</a></li>
+      		<li><a href="index4.html">4</a></li>
+      		<li><a href="index5.html">5</a></li>
+      	</ul>
+      </div>
+      <!--page-nav-->
+   </body>
+</html>

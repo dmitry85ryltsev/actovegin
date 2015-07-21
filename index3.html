@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>{!POSITION_1}</title>
+      <link href="css/style_general.css" rel="stylesheet">
+      <link href="css/style_neuroprotection.css" rel="stylesheet">
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/iscroll.js"></script> 
+      <script> 
+         var sourceScroll, comentScroll; 
+         function loaded() { 
+         sourceScroll = new iScroll('source_info', { scrollbarClass: 'infoScrollbar' }); 
+         }; 
+         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
+         document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false); 
+      </script> 
+      <script src="js/custom_source.js"></script> 
+      <script> 
+         $(document).ready(function(){ 
+         document.getElementById("start").addEventListener('click', function(event) { 
+         document.getElementById("Stage_base").className += ' animate'; 
+         document.getElementById("title").className = 'open'; 
+         
+         setTimeout( function() { 
+         document.getElementById("ampoule").className += ' shadow'; 
+         }, 3400); 
+         setTimeout( function() { 
+         document.getElementById("Stage_base").className = 'Stage_base'; 
+         }, 5600); 
+         }); 
+         }); 
+      </script> 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> 
+   </head>
+   <body>
+      <div class="wrapper">
+         <a href="instruction.pdf" class="logo"></a> 
+         <!-- ___________________________________________________________________________________________________________________ header --> 
+         <header>
+            <div class="btn source" id="source"></div>
+            <div class="btn coment" id="coment"></div>
+            <h1>Нейропротекция воздействует на зону<br>пенумбры, которая существует<br>при любом подтипе инсульта<sup>1</sup></h1>
+         </header>
+         <!-- ___________________________________________________________________________________________________________________ content --> 
+         <div class="Stage_base" id="Stage_base">
+            <div class="penumbr"></div>
+            <div class="actovegin">
+               <div class="ampoule" id="ampoule"></div>
+               <div class="start" id="start">ЛЕЧИТЬ</div>
+            </div>
+            <div class="drop"></div>
+            <br class="clear"> 
+            <h3 id="title">Воздействуя на разные звенья ишемического каскада, Актовегин позволяет<br> 
+               сократить объем очага поражения ткани головного мозга как при ОНМК,<br> 
+               так и при хронической прогрессирующей энцефалопатии<sup>2</sup>
+            </h3>
+         </div>
+         <!-- Stage_base --> 
+         <div class="over"></div>
+         <!-- ___________________________________________________________________________________________________________________ refer --> 
+         <div class="refer_pane source">
+            <div class="box_info" id="source_info">
+               <div class="info_inner">
+                  <ol>
+                     <li>Верещагин Н.В., Суслина З.А., Пирадов М.А. Принципы диагностики и лечения больных с острыми ишемическими 
+                        нарушениями мозгового кровообращения. Атмосфера. Нервные болезни.-2002. №1. С.8-14. 
+                     </li>
+                     <li>Скорикова Ю.С., Наумов А.В., Дончинова А.А., Верткин А.Л. "Система координат» для выбора нейропротективной терапии" 
+                        “РМЖ (Русский Медицинский Журнал)” 2006
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="close" id="source_close"></div>
+         </div>
+         <!-- _____________________________________________________________________________________________________________________________ --> 
+      </div>
+      <!-- wrapper --> 
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+            <li><a href="index4.html">4</a></li>
+            <li><a href="index5.html">5</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+      <div class="inform">
+         <p>Clickable</br>buttons</p>
+      </div>
+   </body>
+</html>

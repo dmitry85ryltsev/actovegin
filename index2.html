@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>{!POSITION_1}</title>
+      <link href="css/style_general.css" rel="stylesheet">
+      <link href="css/style_therapies.css" rel="stylesheet">
+      <script src="js/getElementsByClassName-1.0.1.js"></script> 
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/iscroll.js"></script> 
+      <script> 
+         var sourceScroll, comentScroll; 
+         function loaded() { 
+         sourceScroll = new iScroll('source_info', { scrollbarClass: 'infoScrollbar' }); 
+         comentScroll = new iScroll('coment_info', { scrollbarClass: 'infoScrollbar' }); 
+         }; 
+         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
+         document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false); 
+      </script> 
+      <script src="js/custom.js"></script> 
+      <script> 
+         $(document).ready(function(){ 
+         
+         var tagBtns = getElementsByClassName("tag"); 
+         
+         for(var i = 0; i < tagBtns.length; i++) { 
+         tagBtns[i].addEventListener('click', function(event) { 
+         var indexBtn = tagBtns.indexOf(this)+1;	
+         
+         if( this.className=='tag' ) { 
+         $(".tag").removeClass('active'); 
+         $(".content").removeClass('active'); 
+         
+         this.className += ' active'; 
+         $("#tag-"+indexBtn).addClass('active'); //console.log(indexBtn); 
+         } 
+         else { 
+         $(".tag").removeClass('active'); 
+         $(".content").removeClass('active'); 
+         }; 
+         }); 
+         }; 
+         
+         
+         }); 
+      </script> 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> 
+   </head>
+   <body>
+      <div class="wrapper">
+         <a href="instruction.pdf" class="logo"></a> 
+         <!-- header --> 
+         <header>
+            <div class="btn source" id="source"></div>
+            <div class="btn coment" id="coment"></div>
+            <h1>Какие методы терапии ишемического<br>инсульта зависят от его подтипа<sup>1</sup></h1>
+         </header>
+         <!-- content --> 
+         <div class="Stage_base" id="Stage_base">
+            <div class="method">
+               <div class="tag">Антикоагулянтная<br>и антиагригантная терапия<sup>2</sup></div>
+               <div class="content" id="tag-1">
+                  <div class="inner">
+                     <p>Каждый 6й инсульт развивается на фоне<br>фибрилляции предсердий. Назначение<br>варфарина пациентам с фибрилляцией<br> 
+                        предсердий снижает риск развития инсульта<br>на 68%<sup>2</sup>.
+                     </p>
+                  </div>
+               </div>
+               <div class="tag">Тромболитическая терапия<sup>3</sup></div>
+               <div class="content" id="tag-2">
+                  <div class="inner">
+                     <p>Клинические исходы, летальность и частота ВМК при проведении тромболизиса в различных<br> 
+                        этиологических подгруппах инсульта, в соответствии с критериями TOAST<sup>3</sup>.
+                     </p>
+                     <table>
+                        <tr>
+                           <th>&nbsp;</th>
+                           <th><span class="abbr">АКА</span></th>
+                           <th><span class="abbr">КЭ</span></th>
+                           <th><span class="abbr">ПМА</span></th>
+                           <th>Другие уточненные варианты</th>
+                           <th>Полиэтиоло-<br>гические варианты</th>
+                           <th>Неуточненная этиология после комплексного обследования</th>
+                           <th>Неуточненная этиология при недостаточном обследовании</th>
+                           <th>Всего</th>
+                        </tr>
+                        <tr>
+                           <td colspan="9">Хороший исход с учетом поправки на исходный балл по NIHSS, возраст, пол</td>
+                        </tr>
+                        <tr>
+                           <td>ОР</td>
+                           <td>0,78</td>
+                           <td>1,00</td>
+                           <td>1,81</td>
+                           <td>0,66</td>
+                           <td>0,88</td>
+                           <td>1,23</td>
+                           <td>0,84</td>
+                           <td>–</td>
+                        </tr>
+                        <tr>
+                           <td>95% ДИ</td>
+                           <td>0,54–1,11</td>
+                           <td>0,73–1,39</td>
+                           <td>1,01–3,23</td>
+                           <td>0,22–1,99</td>
+                           <td>0,36–2,19</td>
+                           <td>0,75–2,02</td>
+                           <td>0,44–1,61</td>
+                           <td>–</td>
+                        </tr>
+                        <tr>
+                           <td>Летальность через 3 мес</td>
+                           <td>18 (8,5)</td>
+                           <td>47 (12)</td>
+                           <td>1 (1,0)</td>
+                           <td>1 (4,0)</td>
+                           <td>5 (18)</td>
+                           <td>9 (7,1)</td>
+                           <td>16 (26)</td>
+                           <td>97 (10)</td>
+                        </tr>
+                        <tr>
+                           <td>Любое ВМК</td>
+                           <td>36 (17)</td>
+                           <td>102 (26)</td>
+                           <td>2 (2,0)</td>
+                           <td>3 (11)</td>
+                           <td>4 (14)</td>
+                           <td>25 (19)</td>
+                           <td>22 (34)</td>
+                           <td>194 (20)</td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+               <div class="tag">Терапия статинами<sup>4</sup></div>
+               <div class="content" id="tag-3">
+                  <div class="inner">
+                     <p>Терапию статинами необходимо рекомендовать<br>подавляющему большинству больных,<br> 
+                        перенесших некардиоэмболический<br>ишемический инсульт<sup>4</sup>.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="visual"></div>
+         </div>
+         <!-- Stage_base --> 
+         <div class="over"></div>
+         <!-- refer --> 
+         <div class="refer_pane source">
+            <div class="box_info" id="source_info">
+               <div class="info_inner">
+                  <ol>
+                     <li>Amarenco P., Bogousslavsky J., Caplan J. G.A Classification of Stroke Subtypes. <br>//Cerebrovasc Dis. -2009. -V.27. -P.493-50146</li>
+                     <li>A randomized trial of anticoagulants versus aspirin after cerebral ischemia of presumed arterial<br> 
+                        origin. The Stroke Prevention in Reversible Ischemia Trial (SPIRIT) Study Group // Ann. Neurol. 1997.<br> 
+                        V. 42. P. 857
+                     </li>
+                     <li>S. Mustanoja, A. Meretoja, J. Putaala, V. Viitanen, S. Curtze, S. Atula, V. Artto, O. Höppölã, M. Kaste.<br> 
+                        Stroke, 2011; 42: 102–106.
+                     </li>
+                     <li>Furie K.L. et al. // Stroke. 2011. V. 42. P. 227. European Stroke Organisation (ESO) Executive<br> 
+                        Committee; ESO Writing Committee // Cerebrovasc. Dis. 2008. V. 25.P.457
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="close" id="source_close"></div>
+         </div>
+         <div class="refer_pane coment">
+            <div class="box_info" id="coment_info">
+               <div class="info_inner">
+                  <p><strong>АКА</strong> — атеросклероз крупных артерий.</p>
+                  <p><strong>КЭ</strong> — кардиоэмболический подтип.</p>
+                  <p><strong>ПМА</strong> — патология мелких артерий (лакунарный инсульт).</p>
+               </div>
+            </div>
+            <div class="close" id="coment_close"></div>
+         </div>
+        
+      </div>
+      <!-- wrapper --> 
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+            <li><a href="index4.html">4</a></li>
+            <li><a href="index5.html">5</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+      <div class="inform">
+      	<p>Clickable</br>buttons</p>
+      </div>
+   </body>
+</html>

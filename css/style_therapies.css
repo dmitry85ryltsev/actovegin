@@ -1,0 +1,178 @@
+@charset "utf-8";
+.Stage_base {
+    padding: 155px 40px 0 0;
+}
+.method {
+    float: right;
+    width: 465px;
+    height: 580px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: end;
+    color: #3b3b3b;
+}
+.tag {
+    position: relative;
+    width: 465px;
+    height: 70px;
+    background: -webkit-linear-gradient(left, #e3e3e3 0%, #efefef 14%, #f1f1f1 20%, #f1f1f1 80%, #efefef 86%, #e3e3e3 100%);
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 15px 8px -14px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 8px -14px rgba(0, 0, 0, 0.4);
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 2px;
+    z-index: 10;
+}
+.tag.active {
+    background: #f0d5cd;
+}
+.tag.active:nth-child(3) {
+    margin-top: -28px;
+}
+.content {
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 28px;
+    z-index: 3;
+}
+.content:nth-child(4) {
+    width: 910px;
+}
+.content .inner {
+    background: #fffbf7;
+    height: 0;
+    opacity: 0;
+    -webkit-transition-property: opacity, height;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0ms;
+    padding: 13px 20px 0;
+}
+.content.active .inner {
+    opacity: 1;
+    -webkit-transition-delay: 600ms, 300ms;
+}
+.content.active:nth-child(2) .inner {
+    height: 110px;
+}
+.content.active:nth-child(4) .inner {
+    height: 306px;
+}
+.content.active:nth-child(6) .inner {
+    height: 88px;
+}
+.content.active:nth-child(4) {
+    margin-bottom: 0;
+}
+.content table {
+    width: 100%;
+    background: #f2f2f2;
+    margin-top: 5px;
+}
+.content table tr th {
+    width: 80px;
+    height: 80px;
+    background: #f0d5cd;
+    border-left: 1px solid #ffffff;
+    font: 16px/16px 'Conv_MyriadPro-Bold', sans-serif;
+    font-weight: normal;
+    color: #890901;
+    text-align: left;
+    padding-left: 10px;
+}
+.content table tr th:nth-child(1) {
+    width: 102px;
+}
+.content table tr th:nth-child(5) {
+    width: 107px;
+}
+.content table tr th:nth-child(6) {
+    width: 116px;
+}
+.content table tr th:nth-child(7) {
+    width: 147px;
+}
+.content table tr th:nth-child(8) {
+    width: 131px;
+}
+.content table tr th:nth-child(9) {
+    width: 67px;
+}
+.content table tr td {
+    border-right: 3px solid #ffffff;
+    font-size: 15px;
+    line-height: 14px;
+    color: #000000;
+    text-align: center;
+    padding: 0px;
+}
+.content table tr td:nth-child(1) {
+    border-left: 3px solid #ffffff;
+    font: 16px/16px 'Conv_MyriadPro-Bold', sans-serif;
+    font-weight: normal;
+    color: #890901;
+    text-align: left;
+    padding-left: 2px;
+}
+.content table tr:nth-child(2) td {
+    border: none;
+    font: 14px/24px Arial, sans-serif;
+    font-style: italic;
+    color: #3b3b3b;
+}
+.content table tr:nth-child(3) td {
+    border-color: #fffbf7;
+    padding-top: 7px;
+}
+.content table tr:nth-child(4) td {
+    height: 26px;
+    border-top: 10px solid #ffffff;
+}
+.content table tr:nth-child(5) td {
+    height: 40px;
+}
+.content table tr:nth-child(6) td {
+    height: 30px;
+    border-bottom: 10px solid #ffffff;
+}
+.content table tr:nth-child(odd) td {
+    background: #fffbf7;
+}
+.abbr {
+    position: relative;
+    display: block;
+}
+.abbr:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../images/button3.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -15px;
+}
+.visual {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 490px;
+    height: 595px;
+    background: url(../images/visual/grl.jpg) no-repeat 0 10px;
+    background-size: contain;
+}
+
+/*iform cloud*/
+.inform {
+    top: 100px;
+    left: 50%;
+}
